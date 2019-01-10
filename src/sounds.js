@@ -1,32 +1,32 @@
 export const sounds = [
   {
-    name: 'Ding Dong Sing Song This Is A Long Title!',
-    category: 'Miscellaneous',
+    name: 'Sound 1',
+    category: 'Category 1',
     audio: require('./assets/sounds/ding.mp3')
   },
   {
-    name: 'Dong',
-    category: 'Miscellaneous',
+    name: 'Sound 2',
+    category: 'Category 1',
     audio: require('./assets/sounds/ding.mp3')
   },
   {
-    name: 'Sing',
-    category: 'Miscellaneous',
+    name: 'Sound 3',
+    category: 'Category 1',
     audio: require('./assets/sounds/ding.mp3')
   },
   {
-    name: 'Song',
-    category: 'Herp',
+    name: 'Sound 4',
+    category: 'Category 2',
     audio: require('./assets/sounds/ding.mp3')
   },
   {
-    name: 'Bing',
-    category: 'Herp',
+    name: 'Sound 5',
+    category: 'Category 3',
     audio: require('./assets/sounds/ding.mp3')
   },
   {
-    name: 'Bong',
-    category: 'Herp',
+    name: 'Sound 6',
+    category: 'Category 3',
     audio: require('./assets/sounds/ding.mp3')
   }
 ]

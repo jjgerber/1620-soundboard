@@ -1,6 +1,6 @@
 <template>
     <v-app dark>
-      <v-toolbar color="red darken-4 white--text" app>
+      <v-toolbar color="red darken-4" app>
         <v-toolbar-title class="headline text-uppercase">
           <div class="icon">
             <Logo />
@@ -54,7 +54,7 @@ export default {
 .title {
   display: inline-block;
   vertical-align: top;
-  margin-top: 17px;
+  margin-top: 15px;
   margin-left: 5px;
 }
 
