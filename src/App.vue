@@ -1,31 +1,64 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+    <v-app dark>
+      <v-toolbar color="red darken-4 white--text" app>
+        <v-toolbar-title class="headline text-uppercase">
+          <div class="icon">
+            <Logo />
+            <div class="title">Sound Board</div>
+          </div>
+        </v-toolbar-title>
+        <v-spacer></v-spacer>
+        <v-btn
+          flat
+          href="/about"
+        >
+          <span class="mr-2 white--text">About</span>
+        </v-btn>
+
+      </v-toolbar>
+
+      <v-content>
+        <v-container>
+          <v-layout
+            text-xs-center
+            wrap>
+            <Search />
+            <Listing />
+          </v-layout>
+        </v-container>
+      </v-content>
+    </v-app>
 </template>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import Search from './components/Search';
+import Listing from './components/Listing';
+import Logo from './components/icons/Logo';
+
+export default {
+  name: 'App',
+  components: {
+    Listing,
+    Logo,
+    Search
+  },
+  data () {
+    return {
+      //
+    }
+  }
 }
-#nav {
-  padding: 30px;
+</script>
+
+<style scoped>
+.title {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 17px;
+  margin-left: 5px;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.icon {
+  margin-top: 10px;
 }
 </style>

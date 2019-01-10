@@ -1,0 +1,28 @@
+<template>
+    <v-card :ripple="true" :raised="true" color="grey" :light="true" :min-width="200" :min-height="100" 
+        class="pa-2 center-middle" @click="playSound()">
+        {{ name }}
+    </v-card>
+</template>
+
+<script>
+export default {
+    props: {
+        name: String,
+        audio: String
+    },
+    methods: {
+        playSound() {
+            new Audio(this.audio).play();
+        }
+    }
+}
+</script>
+
+<style scoped>
+.center-middle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+</style>
