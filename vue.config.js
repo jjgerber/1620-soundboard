@@ -1,3 +1,3 @@
 module.exports = {
-  baseUrl: '/'
+  baseUrl: '/1620-soundboard/'
 }
