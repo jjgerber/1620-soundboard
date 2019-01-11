@@ -17,8 +17,14 @@
 <script>
 export default {
     props: {
-        name: String,
-        audio: String
+        name: {
+            type: String,
+            default: 'Sound'
+        },
+        audio: {
+            type: String,
+            default: null
+        }
     },
     methods: {
         playSound() {

@@ -8,7 +8,7 @@
         <div class="icon">
           <Logo />
           <div class="title font-weight-thin">
-            Sound Board
+            Soundboard
           </div>
         </div>
       </v-toolbar-title>
@@ -30,6 +30,7 @@
           wrap
         >
           <Search v-model="search" />
+          Searching For: {{ search }}
           <Listing :search="search" />
         </v-layout>
       </v-container>

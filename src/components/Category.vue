@@ -1,5 +1,8 @@
 <template>
-  <div fill-width class="min-width">
+  <div 
+    fill-width 
+    class="min-width"
+  >
     <h1>{{ name }}</h1>
     <hr>
     <v-card>
@@ -21,7 +24,10 @@
 <script>
 export default {
     props: {
-        name: String
+        name: {
+          type: String,
+          default: 'Sounds'
+        }
     }
 }
 </script>

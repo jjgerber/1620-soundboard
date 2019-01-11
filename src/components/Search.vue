@@ -9,6 +9,7 @@
         grow
       >
         <v-text-field
+          v-model="search"
           placeholder="Search"
           append-icon="search"
           single-line
@@ -21,15 +22,20 @@
 <script>
 export default {
     props: {
-        value: String
-    },
-    data: () => {
-        this.value
-    },
-    methods: {
-        update() {
-            this.$emit('input', this.search);
+        value: {
+          type: String,
+          default: ''
         }
+    },
+  data () {
+    return {
+        search: this.value
+      }
+    },
+    watch: {
+      search() {
+        this.$emit('input', this.search);
+      }
     }
 }
 </script>
