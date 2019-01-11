@@ -1,33 +1,40 @@
 <template>
-    <v-app dark>
-      <v-toolbar color="red darken-4" app>
-        <v-toolbar-title class="headline text-uppercase">
-          <div class="icon">
-            <Logo />
-            <div class="title">Sound Board</div>
+  <v-app dark>
+    <v-toolbar
+      color="red darken-4"
+      app
+    >
+      <v-toolbar-title class="headline text-uppercase">
+        <div class="icon">
+          <Logo />
+          <div class="title font-weight-thin">
+            Sound Board
           </div>
-        </v-toolbar-title>
-        <v-spacer></v-spacer>
-        <v-btn
-          flat
-          href="/about"
+        </div>
+      </v-toolbar-title>
+      <v-spacer />
+      <v-btn
+        flat
+        href="/about"
+      >
+        <span class="mr-2 white--text">
+          About
+        </span>
+      </v-btn>
+    </v-toolbar>
+
+    <v-content>
+      <v-container>
+        <v-layout
+          text-xs-center
+          wrap
         >
-          <span class="mr-2 white--text">About</span>
-        </v-btn>
-
-      </v-toolbar>
-
-      <v-content>
-        <v-container>
-          <v-layout
-            text-xs-center
-            wrap>
-            <Search />
-            <Listing />
-          </v-layout>
-        </v-container>
-      </v-content>
-    </v-app>
+          <Search v-model="search" />
+          <Listing :search="search" />
+        </v-layout>
+      </v-container>
+    </v-content>
+  </v-app>
 </template>
 
 <script>
@@ -44,7 +51,7 @@ export default {
   },
   data () {
     return {
-      //
+      search: ''
     }
   }
 }

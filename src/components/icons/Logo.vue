@@ -1,12 +1,15 @@
 <template>
-    <img :src="iconUrl" class="logoIcon" />
+  <img 
+    :src="iconUrl"
+    class="logoIcon" 
+  >
 </template>
 
 <script>
 export default {
     computed: {
         iconUrl() {
-            return require('../../assets/logo_1620.png')
+            return require('../../assets/logo_1620.png');
         }
     }
 }

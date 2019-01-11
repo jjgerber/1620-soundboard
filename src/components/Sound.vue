@@ -1,8 +1,16 @@
 <template>
-    <v-card :ripple="true" :raised="true" color="grey" :light="true" width="100%" :min-height="100" 
-        class="pa-2 center-middle" @click="playSound()">
-        {{ name }}
-    </v-card>
+  <v-card
+    :ripple="true"
+    :raised="true"
+    color="grey" 
+    :light="true" 
+    width="100%" 
+    :min-height="100" 
+    class="pa-2 center-middle"
+    @click="playSound()"
+  >
+    {{ name }}
+  </v-card>
 </template>
 
 <script>

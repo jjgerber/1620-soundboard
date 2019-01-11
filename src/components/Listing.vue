@@ -1,10 +1,23 @@
 <template>
-  <v-container fluid xs12 grow>
-    <Category v-for="(category, i) in categories" :key="i" :name="category">
-      <v-flex xs4 v-for="(s, i2) in categorySounds(category)"  :key="i2">
+  <v-container
+    fluid
+    xs12
+    grow
+  >
+    <Category 
+      v-for="(category, i) in categories" 
+      :key="i" 
+      :name="category"
+    >
+      <v-flex
+        v-for="(s, i2) in categorySounds(category)"
+        :key="i2"
+        xs4
+      >
         <Sound
           :name="s.name"
-          :audio="s.audio" />
+          :audio="s.audio"
+        />
       </v-flex>
     </Category>
   </v-container>
@@ -23,14 +36,14 @@
     data: () => ({
       sounds
     }),
+    computed: {
+      categories() {
+        return [...new Set(this.sounds.map(item => item.category))] || ['NA'];
+      }
+    },
     methods: {
       categorySounds(category) {
         return this.sounds.filter(sound => sound.category === category);
-      }
-    },
-    computed: {
-      categories() {
-        return [...new Set(this.sounds.map(item => item.category))] || 'NA';
       }
     }
   }
