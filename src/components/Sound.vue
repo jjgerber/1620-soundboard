@@ -5,7 +5,8 @@
     color="grey" 
     :light="true" 
     width="100%" 
-    :min-height="100" 
+    :min-height="65" 
+    :min-width="200"
     class="pa-2 center-middle"
     @click="playSound()"
   >

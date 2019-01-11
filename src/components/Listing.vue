@@ -12,7 +12,11 @@
       <v-flex
         v-for="(s, i2) in categorySounds(category)"
         :key="i2"
-        xs4
+        xs12
+        sm6
+        md4
+        lg3
+        xl2
       >
         <Sound
           :name="s.name"

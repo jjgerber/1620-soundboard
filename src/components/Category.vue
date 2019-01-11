@@ -1,5 +1,5 @@
 <template>
-  <div fill-width>
+  <div fill-width class="min-width">
     <h1>{{ name }}</h1>
     <hr>
     <v-card>
@@ -27,5 +27,7 @@ export default {
 </script>
 
 <style scoped>
-
+.min-width {
+  min-width: 250px;
+}
 </style>
