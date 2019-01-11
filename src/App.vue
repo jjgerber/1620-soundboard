@@ -15,11 +15,9 @@
       <v-spacer />
       <v-btn
         flat
+        @click="showAbout = true"
       >
-        <span 
-          class="mr-2 white--text" 
-          @click="showAbout = true"
-        >
+        <span class="mr-2 white--text">
           About
         </span>
       </v-btn>

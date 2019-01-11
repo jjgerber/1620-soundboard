@@ -7,8 +7,7 @@
       About Text Will Go Here.
     </v-card-text>
     <div 
-      xs12 
-      fill-width 
+      xs6
       class="text-center pa-3 text-xs-center"
     >
       <v-btn
