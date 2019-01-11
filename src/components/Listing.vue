@@ -30,24 +30,26 @@
 <script>
   import Category from '../components/Category';
   import Sound from '../components/Sound';
-  import { sounds } from '../sounds.js'
 
   export default {
     components: {
       Category,
       Sound
     },
-    data: () => ({
-      sounds
-    }),
+    props: {
+      allSounds: {
+        type: Array,
+        default: () => []
+      }
+    },
     computed: {
       categories() {
-        return [...new Set(this.sounds.map(item => item.category))] || ['NA'];
+        return [...new Set(this.allSounds.map(item => item.category))] || ['NA'];
       }
     },
     methods: {
       categorySounds(category) {
-        return this.sounds.filter(sound => sound.category === category);
+        return this.allSounds.filter(sound => sound.category === category);
       }
     }
   }

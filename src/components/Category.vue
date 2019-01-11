@@ -23,12 +23,12 @@
 
 <script>
 export default {
-    props: {
-        name: {
-          type: String,
-          default: 'Sounds'
-        }
-    }
+  props: {
+      name: {
+        type: String,
+        default: 'Sounds'
+      }
+  }
 }
 </script>
 

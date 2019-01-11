@@ -7,7 +7,7 @@
       <v-toolbar-title class="headline text-uppercase">
         <div class="icon">
           <Logo />
-          <div class="title font-weight-thin">
+          <div class="title">
             Soundboard
           </div>
         </div>
@@ -15,9 +15,11 @@
       <v-spacer />
       <v-btn
         flat
-        href="/about"
       >
-        <span class="mr-2 white--text">
+        <span 
+          class="mr-2 white--text" 
+          @click="showAbout = true"
+        >
           About
         </span>
       </v-btn>
@@ -30,8 +32,22 @@
           wrap
         >
           <Search v-model="search" />
-          Searching For: {{ search }}
-          <Listing :search="search" />
+          <v-expand-transition mode="out-in">
+            <Listing 
+              v-if="!hasSearch" 
+              :all-sounds="sounds"
+              :search="search" 
+            />
+            <SearchResults 
+              v-if="hasSearch"
+              :sounds="sounds"
+              :search="search"
+            />
+          </v-expand-transition>
+
+          <v-dialog v-model="showAbout">
+            <AboutDialog @dialogClosed="showAbout = false" />
+          </v-dialog>
         </v-layout>
       </v-container>
     </v-content>
@@ -39,20 +55,32 @@
 </template>
 
 <script>
+import AboutDialog from './components/AboutDialog';
 import Search from './components/Search';
+import SearchResults from './components/SearchResults';
 import Listing from './components/Listing';
 import Logo from './components/icons/Logo';
+import { sounds } from './sounds.js'
 
 export default {
   name: 'App',
   components: {
+    AboutDialog,
     Listing,
     Logo,
-    Search
+    Search,
+    SearchResults
   },
   data () {
     return {
-      search: ''
+      search: '',
+      sounds,
+      showAbout: false
+    }
+  },
+  computed: {
+    hasSearch() {
+      return !!this.search
     }
   }
 }
