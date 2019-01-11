@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: './1620-soundboard/'
+  baseUrl: '/1620-soundboard/'
 }
