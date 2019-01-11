@@ -1,5 +1,5 @@
 <template>
-    <v-card :ripple="true" :raised="true" color="grey" :light="true" :min-width="200" :min-height="100" 
+    <v-card :ripple="true" :raised="true" color="grey" :light="true" width="100%" :min-height="100" 
         class="pa-2 center-middle" @click="playSound()">
         {{ name }}
     </v-card>
