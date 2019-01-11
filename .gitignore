@@ -34,3 +34,7 @@ node_modules/
 
 # Yarn Integrity file
 .yarn-integrity
+
+
+# Mac Files
+.DS_Store
