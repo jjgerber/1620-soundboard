@@ -21,22 +21,22 @@
 
 <script>
 export default {
-    props: {
-        value: {
-          type: String,
-          default: ''
-        }
-    },
+  props: {
+    value: {
+      type: String,
+      default: ''
+    }
+  },
   data () {
     return {
-        search: this.value
-      }
-    },
-    watch: {
-      search() {
-        this.$emit('input', this.search);
-      }
+      search: this.value
     }
+  },
+  watch: {
+    search() {
+      this.$emit('input', this.search);
+    }
+  }
 }
 </script>
 

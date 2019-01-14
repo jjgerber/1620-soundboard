@@ -30,7 +30,7 @@
           wrap
         >
           <Search v-model="search" />
-          <v-expand-transition mode="out-in">
+          <v-fade-transition mode="out-in">
             <Listing 
               v-if="!hasSearch" 
               :all-sounds="sounds"
@@ -41,7 +41,7 @@
               :sounds="sounds"
               :search="search"
             />
-          </v-expand-transition>
+          </v-fade-transition>
 
           <v-dialog v-model="showAbout">
             <AboutDialog @dialogClosed="showAbout = false" />

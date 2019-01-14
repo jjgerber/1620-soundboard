@@ -24,10 +24,10 @@
 <script>
 export default {
   props: {
-      name: {
-        type: String,
-        default: 'Sounds'
-      }
+    name: {
+      type: String,
+      default: 'Sounds'
+    }
   }
 }
 </script>

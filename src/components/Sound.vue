@@ -16,21 +16,21 @@
 
 <script>
 export default {
-    props: {
-        name: {
-            type: String,
-            default: 'Sound'
-        },
-        audio: {
-            type: String,
-            default: null
-        }
+  props: {
+    name: {
+      type: String,
+      default: 'Sound'
     },
-    methods: {
-        playSound() {
-            new Audio(this.audio).play();
-        }
+    audio: {
+      type: String,
+      default: null
     }
+  },
+  methods: {
+    playSound() {
+      new Audio(this.audio).play();
+    }
+  }
 }
 </script>
 

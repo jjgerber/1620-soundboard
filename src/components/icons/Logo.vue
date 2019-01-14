@@ -7,16 +7,16 @@
 
 <script>
 export default {
-    computed: {
-        iconUrl() {
-            return require('../../assets/logo_1620.png');
-        }
+  computed: {
+    iconUrl() {
+      return require('../../assets/logo_1620.png');
     }
+  }
 }
 </script>
 
 <style scoped>
 .logoIcon {
-    margin: 2px;
+  margin: 2px;
 }
 </style>
