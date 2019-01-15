@@ -99,7 +99,7 @@ export default {
   left: 0;
   right: 0;
   display: block;
-  background-image: url('./assets/bg.jpg') !important;
+  background-image: url('./assets/bglq.jpg') !important;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;

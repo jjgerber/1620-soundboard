@@ -5,7 +5,7 @@
   >
     <h1>{{ name }}</h1>
     <v-card 
-      color="rgba(0,0,0,.5)"
+      color="rgba(0,0,0,.7)"
       flat
       tile
       class="category"
