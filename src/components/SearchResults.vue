@@ -64,8 +64,6 @@ export default {
   },
   methods: {
     doSearch() {
-      // eslint-disable-next-line no-console
-      console.log("SEARCHING!");
       return this.sounds.filter(sound => sound.name.toLowerCase().indexOf(this.search.toLowerCase()) > -1);
     }
   }

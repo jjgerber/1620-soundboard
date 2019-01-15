@@ -7,7 +7,7 @@
     width="100%" 
     :min-height="65" 
     :min-width="200"
-    class="pa-2 center-middle"
+    class="pa-2 center-middle sound-button"
     @click="playSound()"
   >
     {{ name }}
@@ -39,5 +39,9 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.sound-button {
+  cursor: pointer;
 }
 </style>

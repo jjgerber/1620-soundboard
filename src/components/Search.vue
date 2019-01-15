@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container pb-0>
     <v-layout 
       row
       wrap
@@ -12,6 +12,9 @@
           v-model="search"
           placeholder="Search"
           append-icon="search"
+          color="red darken-4"
+          box
+          clearable
           single-line
         />
       </v-flex>

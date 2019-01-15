@@ -3,6 +3,7 @@
     fluid
     xs12
     grow
+    pt-0
   >
     <Category 
       v-for="(category, i) in categories" 

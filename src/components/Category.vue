@@ -4,8 +4,7 @@
     class="min-width"
   >
     <h1>{{ name }}</h1>
-    <hr>
-    <v-card>
+    <v-card class="category">
       <v-container
         fluid
         grid-list-md
@@ -33,6 +32,10 @@ export default {
 </script>
 
 <style scoped>
+.category {
+  border-top: 2px rgba(255,255,255,0.7) solid !important;
+}
+
 .min-width {
   min-width: 250px;
 }
