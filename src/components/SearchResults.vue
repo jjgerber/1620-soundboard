@@ -3,6 +3,7 @@
     fluid
     xs12
     grow
+    class="pt-0"
   >
     <v-alert 
       v-if="!hasResults"
@@ -10,6 +11,7 @@
       :value="true"
       type="error"
       transition="fade-transition"
+      class="text-xs-left"
     >
       There were no results found.
     </v-alert>

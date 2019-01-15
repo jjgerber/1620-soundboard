@@ -1,5 +1,6 @@
 <template>
   <v-app dark>
+    <div class="stadium-bg" />
     <v-toolbar
       color="red darken-4"
       app
@@ -46,7 +47,7 @@
 
           <v-dialog 
             v-model="showAbout"
-            width="500px"
+            width="550px"
           >
             <AboutDialog @dialogClosed="showAbout = false" />
           </v-dialog>
@@ -89,6 +90,33 @@ export default {
 </script>
 
 <style scoped>
+.stadium-bg {
+  z-index: -101;
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  background-image: url('./assets/bg.jpg') !important;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.stadium-bg:after {
+  z-index: -100;
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .title {
   display: inline-block;
   vertical-align: top;
@@ -98,5 +126,22 @@ export default {
 
 .icon {
   margin-top: 10px;
+}
+
+.theme--dark.application {
+    background: none;
+}
+</style>
+
+<style>
+/* Global Style Overrides! */
+#app .theme--dark.v-text-field--box>.v-input__control>.v-input__slot {
+    background: rgba(0,0,0,.5);
+    transition: 100ms;
+}
+
+#app .theme--dark.v-text-field--box>.v-input__control>.v-input__slot:hover {
+    background: rgba(0,0,0,.7);
+    transition: 100ms;
 }
 </style>

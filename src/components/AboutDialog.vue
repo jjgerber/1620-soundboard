@@ -21,7 +21,6 @@
             style="margin-left: auto; display: inline-block;"
           >
             <img 
-              style="height: 32px; width: 32px;"
               :src="githubImage"
             >
           </a>
@@ -29,7 +28,7 @@
       </v-layout>
     </v-card-title>
     <v-card-text>
-      <p>This soundboard application was written for fun by a listener of <b>1620 the Zone</b>.</p>
+      <p>This soundboard was written for fun by a listener of <b>1620 the Zone</b>. Thanks to Stibbs for gathering up the audio files!</p>
       <p class="mb-0">
         Click the Octocat to view the source code.
       </p>
