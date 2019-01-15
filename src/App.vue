@@ -30,7 +30,7 @@
           wrap
         >
           <Search v-model="search" />
-          
+
           <v-fade-transition mode="out-in">
             <Listing 
               v-if="!hasSearch" 
@@ -44,7 +44,10 @@
             />
           </v-fade-transition>
 
-          <v-dialog v-model="showAbout">
+          <v-dialog 
+            v-model="showAbout"
+            width="500px"
+          >
             <AboutDialog @dialogClosed="showAbout = false" />
           </v-dialog>
         </v-layout>
