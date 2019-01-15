@@ -4,12 +4,19 @@
     xs12
     grow
   >
-    <Category 
+    <v-alert 
+      v-if="!hasResults"
+      color="red darken-2"
+      :value="true"
+      type="error"
+      transition="fade-transition"
+    >
+      There were no results found.
+    </v-alert>
+    <Category
+      v-else
       :name="search"
     >
-      <p v-if="!hasResults">
-        There were no sounds found.
-      </p>
       <v-flex
         v-for="(s, i) in results"
         :key="i"

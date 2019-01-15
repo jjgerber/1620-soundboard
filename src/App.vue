@@ -30,6 +30,7 @@
           wrap
         >
           <Search v-model="search" />
+          
           <v-fade-transition mode="out-in">
             <Listing 
               v-if="!hasSearch" 

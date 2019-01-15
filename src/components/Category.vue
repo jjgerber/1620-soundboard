@@ -1,10 +1,15 @@
 <template>
   <div 
     fill-width 
-    class="min-width"
+    class="min-width mb-3"
   >
     <h1>{{ name }}</h1>
-    <v-card class="category">
+    <v-card 
+      color="rgba(0,0,0,.1)"
+      flat
+      tile
+      class="category"
+    >
       <v-container
         fluid
         grid-list-md
@@ -34,6 +39,12 @@ export default {
 <style scoped>
 .category {
   border-top: 2px rgba(255,255,255,0.7) solid !important;
+  transition: 300ms;
+}
+
+.category:hover {
+  border-top: 2px rgba(183,28,28,1) solid !important;
+  transition: 300ms;
 }
 
 .min-width {
