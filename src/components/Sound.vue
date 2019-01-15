@@ -2,7 +2,7 @@
   <v-card
     :ripple="true"
     :raised="true"
-    color="grey" 
+    color="grey lighten-2" 
     :light="true" 
     width="100%" 
     :min-height="65" 

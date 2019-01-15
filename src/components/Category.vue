@@ -42,11 +42,6 @@ export default {
   transition: 300ms;
 }
 
-.category:hover {
-  border-top: 2px rgba(183,28,28,1) solid !important;
-  transition: 300ms;
-}
-
 .min-width {
   min-width: 250px;
 }
